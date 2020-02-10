@@ -15,7 +15,7 @@ I frequently find myself with 6+ projects (for me means git repositories) open c
 Clone repository:
 
 ```sh
-git git@github.com:meddario/workspace-utils.git ~/.workspace-utils
+git clone https://github.com/meddario/workspace-utils.git ~/.workspace-utils
 ```
 
 Add in `~/.bashrc`:
