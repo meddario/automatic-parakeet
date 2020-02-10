@@ -75,9 +75,9 @@ def update_iterm_tab_color(color):
             sys.stdout.write(seq)
 
 
-def update_vscode_peacock_config(values):
+def update_vscode_peacock_config(repo_root, values):
     hexval = '#%02x%02x%02x' % tuple(values)
-    config_dir = os.path.join('.', '.vscode')
+    config_dir = os.path.join(repo_root, '.vscode')
     config_path = os.path.join(config_dir, 'settings.json')
     additional_config = {"peacock.color": hexval}
     config = additional_config
@@ -113,4 +113,4 @@ if __name__ == '__main__':
             if config.get('update_iterm_tab_color'):
                 update_iterm_tab_color(colors)
             if config.get('update_vscode_peacock_config'):
-                update_vscode_peacock_config(colors)
+                update_vscode_peacock_config(repo_root, colors)
