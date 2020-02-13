@@ -85,7 +85,7 @@ def update_vscode_peacock_config(repo_root, values):
         with open(config_path) as f:
             file_str = f.read()
             existing_config = json.loads(file_str)
-            if existing_config["peacock.color"] == hexval:
+            if existing_config.get("peacock.color") == hexval:
                 return
             config = merge_two_dicts(existing_config, additional_config)
     mkdir_p(config_dir)
